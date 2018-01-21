@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val url = "https://google.com"
+        val url = "http://accelonome.com"
         MobileAds.initialize(applicationContext, "ca-app-pub-6815878541496227~2236371059")
 
         val adRequest = AdRequest.Builder().build()
