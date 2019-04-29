@@ -29,17 +29,6 @@ class MainActivity : AppCompatActivity() {
         adView.loadAd(adRequest)
 
         webView.webViewClient = object : WebViewClient() {
-
-            /*override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-                if(url!!.startsWith("https://google.com")){
-                    webView.loadUrl(url)
-                } else {
-                    val intent = Intent(ACTION_VIEW, Uri.parse(url))
-                    view?.context?.startActivity(intent)
-                }
-                return super.shouldOverrideUrlLoading(view, url)
-            }*/
-
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
                 view?.visibility = View.INVISIBLE
@@ -51,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 view?.visibility = View.VISIBLE
                 progressBar.visibility = View.INVISIBLE
             }
-
         }
         webView.setBackgroundColor(Color.TRANSPARENT)
         webView.settings.loadsImagesAutomatically = true
